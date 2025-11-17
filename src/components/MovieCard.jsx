@@ -1,14 +1,14 @@
 import styles from './MovieCard.module.css';
 import { tmdbAPI } from '../services/tmdbAPI';
 
-const MovieCard = ({ movie }) => {
+const MovieCard = ({ movie, onClick }) => {
   const { title, poster_path, release_date, vote_average } = movie;
   const posterUrl = tmdbAPI.getImageUrl(poster_path);
   const releaseYear = release_date ? new Date(release_date).getFullYear() : 'N/A';
   const rating = vote_average ? vote_average.toFixed(1) : 'N/A';
 
   return (
-    <div className={styles['movie-card']}>
+    <div className={styles['movie-card']} onClick={() => onClick(movie.id)}>
       {posterUrl ? (
         <img
           src={posterUrl}

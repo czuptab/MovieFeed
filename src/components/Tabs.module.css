@@ -1,0 +1,41 @@
+.tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #2a2a2a;
+  overflow-x: auto;
+}
+
+.tabs__tab {
+  padding: 0.75rem 1.5rem;
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  white-space: nowrap;
+}
+
+.tabs__tab:hover {
+  color: #ffffff;
+}
+
+.tabs__tab--active {
+  color: #646cff;
+  border-bottom-color: #646cff;
+}
+
+@media (max-width: 768px) {
+  .tabs {
+    gap: 0.5rem;
+  }
+
+  .tabs__tab {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
