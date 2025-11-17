@@ -1,0 +1,66 @@
+.movie-list {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.movie-list__header {
+  margin-bottom: 2rem;
+}
+
+.movie-list__title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: #ffffff;
+}
+
+.movie-list__subtitle {
+  color: #888;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.movie-list__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.movie-list__loading {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #888;
+  font-size: 1.2rem;
+}
+
+.movie-list__error {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #ff6b6b;
+  font-size: 1.1rem;
+}
+
+.movie-list__empty {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #888;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .movie-list {
+    padding: 1rem;
+  }
+
+  .movie-list__grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+
+  .movie-list__title {
+    font-size: 1.5rem;
+  }
+}
